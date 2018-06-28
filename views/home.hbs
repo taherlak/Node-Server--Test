@@ -1,33 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="format-detection" content="telephone=no"/>
-  <title>{{name}}</title>
+
+<!-- your webpage info goes here -->
+
+    <title>My First Website</title>
+
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
 </head>
 <body>
-  {{> header}}
-<div id="content">
 
-<div id="panelAPW" mugwump="APW1" style="position:absolute; width:887px; z-index:2; left:54px; top:0px; padding:20px 10px 20px 10px; overflow:auto; background-color:transparent; font-family:K-Light,Verdana,Arial,Helvetica,sans-serif; font-size:18px; border:none;height:493px;">
-<h1 style="margin-bottom:16px;margin-top:0px;font-size:40px;font-family:K-Light;color:#FF9000">
-{{name}}</h1>
-<p>{{message}}</p>
-<p class="titlepagep">Upon successful completion of <i>Test03: Level 3,</i> the tester should be able to process the following:</p>
-<ul style="margin-top:18px;">
-<li class="titlepagep"><p>Level 3 audio elements</p>
-</li>
-<li class="titlepagep"><p>Level 2 interactive elements in HTML5</p>
-</li>
-<li class="titlepagep"><p>All Levels with required elements</p>
-</li>
-<li class="titlepagep"><p>All Levels that contain optional elements (tables, lists, wrappers)</p>
-</li>
-<li class="titlepagep"><p>All Levels that have images</p>
-</li>
-<li class="titlepagep"><p>All Levels that have click to reveals (xml versions)</p>
-</li>
-</ul>
-{{> footer}}
-</div></div>
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="logo">
+			<h1><a href="/" id="logoLink">My First Website</a></h1>
+		</div>
+		{{> header}}
+		<div id="content">
+			<h2>{{name}}</h2>
+      <h3>{{message}}</h3>
+			<p>
+				This is my first webpage! I was able to code all the HTML and CSS in order to make it. Watch out world of web design here I come!
+			</p>
+			<p>
+				I can use my skills here to create websites for my business, my friends and family, my C.V, blog or articles. As well as any games or more experiment stuff (which is what the web is really all about).
+			</p>
+		</div>
+		<div id="footer">
+			<p>
+				Webpage made by <a href="/" target="_blank">Taher Lakdawala on {{date}}</a>
+			</p>
+		</div>
+	</div>
 </body>
 </html>

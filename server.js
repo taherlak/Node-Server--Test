@@ -13,12 +13,10 @@ app.use(express.static(__dirname+'/views'));
 // });
 
 app.get('/',(req,res) => {
-  res.send({
-    name : 'Something',
-    work : 'Something',
-    type : ['Something',
-            'Something'
-    ]
+  res.render('home.hbs',{
+    name: 'Welcome Page',
+    date : new Date().getFullYear(),
+    message : 'Welcome to the Home Page'
   });
 });
 
@@ -34,8 +32,8 @@ app.get('/home',(req,res)=>{
     name: 'Welcome Page',
     date : new Date().getFullYear(),
     message : 'Welcome to the Home Page'
-  })
-})
+  });
+});
 
 app.get('/bad',(req,res) => {
   res.send({
